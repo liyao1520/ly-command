@@ -4,6 +4,7 @@ import gfm from "@bytemd/plugin-gfm";
 import highlightSsr from "@bytemd/plugin-highlight-ssr";
 import mediumZoom from "@bytemd/plugin-medium-zoom";
 import "@/styles/github-markdown.scss";
+import "@/styles/highlight.scss";
 export default function MarkdownComponent(props: {
   content: string;
   className?: string;

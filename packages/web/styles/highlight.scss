@@ -1,0 +1,8 @@
+@use "sass:meta";
+:root[class*="dark"] {
+  @include meta.load-css("./atom-one-dark.scss");
+}
+
+:root[class*="light"] {
+  @include meta.load-css("./atom-one-light.scss");
+}
