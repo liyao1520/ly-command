@@ -58,7 +58,7 @@ export const build = async (options?: Options): Promise<BuildResult> => {
     const ncc = require("@vercel/ncc");
     const options = { sourceMap: true, quiet: !log, ...nccOptions };
 
-    const { code, map, assets } = await ncc(main, options);
+    const { code, assets } = await ncc(main, options);
     if (existsSync(DIST_DIR)) {
       await rimraf(DIST_DIR);
     }
@@ -66,7 +66,7 @@ export const build = async (options?: Options): Promise<BuildResult> => {
     log && Log.info("mkdir dist finished");
     await writeFile(resolve(DIST_DIR, "./index.js"), code);
     log && Log.info("write index.js finished");
-    await writeFile(resolve(DIST_DIR, "./index.js.map"), map);
+
     log && Log.info("write index.js.map finished");
     for (const name in assets) {
       const asset = assets[name];
