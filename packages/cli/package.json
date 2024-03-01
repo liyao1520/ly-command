@@ -1,6 +1,6 @@
 {
   "name": "ly-command",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "a command line tool for ly",
   "bin": {
     "ly": "build/index.js"
@@ -19,7 +19,6 @@
     "url": "git+https://github.com/ly-command/ly-command.git"
   },
   "dependencies": {
-    "@cspotcode/zx": "^6.1.2",
     "@vercel/ncc": "^0.38.1",
     "adm-zip": "^0.5.10",
     "appdata-path": "^1.0.0",

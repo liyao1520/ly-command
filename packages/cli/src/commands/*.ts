@@ -1,6 +1,5 @@
 import { Command } from "commander";
 import rootStore from "../store";
-import { $ } from "@cspotcode/zx";
 import { runJs } from "./run";
 export default (program: Command) => {
   program
